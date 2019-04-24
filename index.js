@@ -1,0 +1,20 @@
+var cheerio = require('cheerio');
+var request - require('request'); 
+
+
+
+request('https://koomyuwu.github.io/koomy-github.io/', (error,response, html) => { 
+ if(!error && response.StatusCode == 200){ 
+  //keep 
+  const $ = cheerio.load(html); 
+  
+  //gets site heading 
+  
+  const SiteHeading = $('.intro h1') 
+  const SiteHeadText = SiteHeading.Text(); 
+  console.log(siteHeadText); 
+  
+  
+  
+  //get navbar link
+  
