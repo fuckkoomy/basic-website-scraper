@@ -18,3 +18,12 @@ request('https://koomyuwu.github.io/koomy-github.io/', (error,response, html) =>
   
   //get navbar link
   
+  
+  $('a.nav-link').each(('i, el') => { 
+   const item = $(el).text(); 
+   console.log(item); 
+  }); 
+  
+  
+  //get navbar href
+                      
