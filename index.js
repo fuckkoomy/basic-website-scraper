@@ -3,7 +3,7 @@ var request - require('request');
 
 
 
-request('https://koomyuwu.github.io/koomy-github.io/', (error,response, html) => { 
+request('https://koomyuwu.github.io/koomy-github.io/', (error, response, html) => { 
  if(!error && response.StatusCode == 200){ 
   //keep 
   const $ = cheerio.load(html); 
@@ -25,5 +25,21 @@ request('https://koomyuwu.github.io/koomy-github.io/', (error,response, html) =>
   }); 
   
   
-  //get navbar href
+  //get navbar href 
+  
+  console.log('ALL THE HREF ATTRIBUTE'); 
+  $('a.nav-link').each((i, el,) => { 
+   const thing = $(el).text(); 
+   const link = $(el).attr('href');  
+   console.log(link); 
+  }); 
+  
+  
+  
+ } 
+ 
+ 
+});
+   
+   
                       
