@@ -20,4 +20,13 @@ if(!error && response.statusCode == 200){
     const hrefText = $(el).attr('title'); 
     console.log(hrefText); 
   }); 
+  console.log(''); 
+  console.log('print all the values of the books'); 
+  $('.price_color').each((i, el) => { 
+    const thing = $(el).text() ; 
+    const link = $(el).attr('title'); 
+    console.log(thing); 
+  }); 
+  
+    
   
