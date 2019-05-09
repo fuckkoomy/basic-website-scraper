@@ -27,6 +27,13 @@ if(!error && response.statusCode == 200){
     const link = $(el).attr('title'); 
     console.log(thing); 
   }); 
-  
+  console.log(''); 
+  console.log('current stock of books'); 
+  $('p.instock.availability').each((i, el) => { 
     
+    const stock = $(el).text().replace(/\s\s+/g, '')
+    
+    }); 
+  
+  
   
