@@ -32,8 +32,35 @@ if(!error && response.statusCode == 200){
   $('p.instock.availability').each((i, el) => { 
     
     const stock = $(el).text().replace(/\s\s+/g, '')
-    
+    console.log( stock);
     }); 
+   
+  
+  
+  console.log(''); 
+  console.log('Putting all in the same line'); 
+  $('article.product_pod').each((i, el) => 
+           const title = $(el).find('a').text(); 
+  
+  
+  
+      
+  
+    const price = $(el).find('p.price_color').text(); 
+  
+  
+    const stock = $(el).find('p.instock.availability').text().replace(/\s\s+/g, '');
+
+              // console.log(title+'\t\t\t' + price + '\t\t\t'+  stock);
+
+              //write to CSV
+
+      writeStream.write(`${title}, ${price}, ${stock} \n`);
+
+
+
+     });
+
   
   
   
