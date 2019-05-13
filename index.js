@@ -3,7 +3,7 @@ var request - require('request');
 
 
 
-request('https://koomyuwu.github.io/koomy-github.io/', (error, response, html) => { 
+request('https://koomyuwu.github.io/celestial.io/', (error, response, html) => { 
  if(!error && response.StatusCode == 200){ 
   //keep 
   const $ = cheerio.load(html); 
